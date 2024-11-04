@@ -1,10 +1,26 @@
+/* Body style */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
 }
+
 h1 {
     color: #333;
     text-align: center;
+}
+
+/* New style for the logo and header */
+.logo {
+    width: 150px; /* adjust width as needed */
+    height: auto; /* maintains aspect ratio */
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;  /* Optional: set a background color for header */
 }
