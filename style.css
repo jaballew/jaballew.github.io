@@ -1,3 +1,12 @@
+header {
+    display: flex;
+    align-items: center; /* Vertical centering*/
+    justify-content: center; /* Horizontal centering*/
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ffffff;  /* Optional: set a background color for header */
+}
+
 /* Body style */
 body {
     font-family: Arial, sans-serif;
@@ -17,10 +26,62 @@ h1 {
     height: auto; /* maintains aspect ratio */
 }
 
-header {
-    display: flex;
-    align-items: center;
+.centered-content {
+    text-align: center;
     justify-content: center;
-    padding: 10px 20px;
-    background-color: #ffffff;  /* Optional: set a background color for header */
+}
+
+/* Main container for species boxes */
+.species-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Space between boxes */
+    justify-content: center; /* Center all boxes within the container */
+    padding: 16px;
+}
+
+/* Individual species box styling */
+.species-box {
+    flex: 1 1 calc(33.33% - 32px); /* Three boxes per row */
+    max-width: calc(33.33% - 32px); /* Ensures max-width fits three across */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding: 16px;
+}
+
+/* Image styling */
+.species-box img {
+    width: 100%; /* Make the image fit the box */
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Common name styling */
+.species-box h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 8px 0 4px;
+}
+
+/* Scientific name styling */
+.species-box p {
+    font-size: 0.9em;
+    color: #777;
+    font-style: italic;
+}
+
+@media (max-width: 900px) {
+    .species-box {
+        flex: 1 1 calc(50% - 32px); /* Two boxes per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .species-box {
+        flex: 1 1 100%; /* One box per row on small screens */
+    }
 }
